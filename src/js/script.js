@@ -67,7 +67,10 @@ const addTodoHandler = (e) => {
   const title = titleInput.value;
   const description = descriptionInput.value;
 
-  if (title.trim() === "" && description.trim() === "") return;
+  if (title.trim() === "") {
+    titleInput.style.border = "2px solid #D95233";
+    return;
+  }
 
   const id = uuid();
   const data = { id, title, description };
@@ -90,13 +93,17 @@ const invalidInputHandler = (input) => {
   }
 };
 
-titleInput.addEventListener(
-  "input",
-  invalidInputHandler.bind(null, titleInput),
+["focus", "input"].forEach((event) =>
+  titleInput.addEventListener(
+    event,
+    invalidInputHandler.bind(null, titleInput),
+  ),
 );
-descriptionInput.addEventListener(
-  "input",
-  invalidInputHandler.bind(null, descriptionInput),
+["focus", "input"].forEach((event) =>
+  descriptionInput.addEventListener(
+    event,
+    invalidInputHandler.bind(null, descriptionInput),
+  ),
 );
 addTodoButton.addEventListener("click", showAddTodoPopupHandler);
 addTodoForm.addEventListener("submit", addTodoHandler);
