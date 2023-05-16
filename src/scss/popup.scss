@@ -1,0 +1,51 @@
+.overlay {
+  position: fixed;
+  background-color: rgba($color: #fff, $alpha: .5);
+  width: 100vw;
+  height: 100%;
+  z-index: 8;
+}
+
+.add-todo-popup {
+  position: absolute;
+  z-index: 10;
+  background: linear-gradient(180deg, #31394D 0%, #091739 100%);
+  padding: 3rem;
+  border-radius: 2rem;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+
+  &__close {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: -15px;
+    cursor: pointer;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    &__label {
+      color: #fff;
+    }
+
+    &__input {
+      border: none;
+      outline: none;
+      padding: 1rem;
+      border: 2px solid transparent;
+    }
+  }
+
+  &__button {
+    align-self: center;
+  }
+}

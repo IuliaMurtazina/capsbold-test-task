@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="todo-container">
+    <div class="todo">
+      <div class="todo__header">
+        <span class="todo__title">Todo list</span>
+        <button class="todo__button btn">add</button>
+      </div>
+      <div class="todo-list">
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2022. Author Name</p>
+    </div>
+  </div>
+
+  <div class="overlay hidden"></div>
+  <div class="add-todo-popup hidden">
+    <form class="add-form">
+      <span class="add-form__close">&#10006;</span>
+      <div class="form-group">
+        <label class="form-group__label" for="#title">Title</label>
+        <input class="form-group__input" id="title" type="text" placeholder="Title">
+      </div>
+      <div class="form-group">
+        <label class="form-group__label" for="#description">Description</label>
+        <textarea class="form-group__input" id="description" cols="30" rows="10"></textarea>
+      </div>
+      <button class="add-form__button btn">Add </button>
+    </form>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+$color-main-gray-1: #252E42;
+$color-main-gray-2: #161C2E;
+
+$color-gray: #4F5565;
+$color-gray-2: #414B62;
+
+$color-accent: #FF8469;
+$color-accent-hover: #D95133;
+
+@keyframes bg {
+  0% {
+    background: radial-gradient(50% 50% at 50% 50%, #252E42 0%, #161C2E 100%);
+  }
+
+  100% {
+    background: radial-gradient(35.13% 50% at 50% 50%, #252E42 0%, #161C2E 100%);
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  max-width: 144rem;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  font-weight: 400;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bg 3s ease-in-out infinite;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem 1rem;
+  background: $color-accent;
+  border-radius: 7px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 1.4rem;
+
+  &:hover {
+    background-color: $color-accent-hover;
+  }
+}
+
+.hidden {
+  display: none
+}
+
+@import './todo.scss';
+@import './popup.scss';
